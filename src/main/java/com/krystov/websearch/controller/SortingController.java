@@ -17,7 +17,9 @@ public class SortingController {
     @Autowired
     private SortingService sortingService;
 
-    @PostMapping("/sort")
+    @PostMapping(value = "/sort",
+            consumes = "application/json",
+            produces = "application/json")
     public ResponseEntity<SortResponse> sort(@RequestBody SortRequest request) {
         long startTime = System.currentTimeMillis();
         int[] sortedData = sortingService.sort(request.getData(), request.getAlgorithm());

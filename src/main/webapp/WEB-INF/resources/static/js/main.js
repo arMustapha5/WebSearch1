@@ -55,7 +55,7 @@ function sortData() {
     // Show loading state
     document.getElementById('executionTime').innerHTML = 'Sorting...';
 
-    fetch('/api/sort', {
+    fetch('/websearch/api/sort', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
